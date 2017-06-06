@@ -8,7 +8,12 @@
 
 User.destroy_all
 
+puts "hello"
+
+
 user1 = User.create(email: "user@findpair.com", password: "abcd1234")
 
-student1 = Student.create(name: "Job", bio: "Likes to code", image_url:
-"https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/1200px-Smiley.svg.png", user: user1)
+student1 = Student.create(name: "Job", bio: "Likes to code", image_url: "http://res.cloudinary.com/jeroen-ro/image/upload/v1496758393/Job_el5fcj.png", user: user1)
+
+student2 = Student.create(name: "Henk", bio: "herro", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Helmut-Lotti.jpg/266px-Helmut-Lotti.jpg", user: user1)
+student3 = Student.create(name: "Jaap", bio: "hallo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Helmut-Lotti.jpg/266px-Helmut-Lotti.jpg", user: user1)

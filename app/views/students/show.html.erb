@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @student.name %></div>
+
+  <div class="panel-body">
+
+    <p>Bio: <%= @student.bio %></p>
+    <p>Image: <%= image_tag @student.image_url, class: "student_images" %></p>
+
+  </div>
+
+</div>
+
+<%= link_to "Back", students_path, class: "btn btn-default" %>
