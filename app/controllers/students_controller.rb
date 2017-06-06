@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @student = Student.find(params[:id])
   end
 
   def new
@@ -36,8 +37,11 @@ class StudentsController < ApplicationController
 
   private
     def set_student
-      @student = student.find(params[:id])
+      @student = Student.find(params[:id])
     end
+
+    # students.find(params[:id])
+    # @student = current_user.students
 
     def student_params
       params.require(:student).permit(:name, :bio, :image_url)
